@@ -1,0 +1,117 @@
+.cardflex {
+  background-color: white;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  color: #6f6f6f;
+  padding: 1.2rem;
+  // margin: 0 auto;
+  max-width: 900px;
+  border: 1px solid #afafaf9b;
+  border-top: none;
+  position: relative;
+
+  &:hover {
+    background-color: #afafaf9b;
+    cursor: pointer;
+    transition: all 0.25s ease-in-out;
+
+    .upvotes {
+      background-color: white;
+    }
+  }
+
+  .leftrow {
+    display: flex;
+    flex-flow: row nowrap;
+  }
+
+  .content {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    padding: 0.2rem;
+    margin-left: 0.5rem;
+  }
+
+  .heading {
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: black;
+  }
+
+  .logo {
+    img {
+      max-height: 120px;
+    }
+  }
+
+  .footer {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: baseline;
+    align-items: center;
+
+    sl-button {
+      font-size: 1rem;
+    }
+
+    p {
+      margin-left: 0.5rem;
+
+      &:hover {
+        text-decoration: underline !important;
+        cursor: pointer !important;
+      }
+    }
+
+    sl-button,
+    p {
+      :hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+}
+
+.upvotes {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #afafaf9b;
+  width: 80px;
+  height: 100px;
+  // position: absolute;
+  // z-index: 3;
+
+  &:hover {
+    cursor: pointer !important;
+    // background-color: #afafaf9b !important;
+
+    .cardflex {
+      background-color: none !important;
+    }
+  }
+
+  sl-icon {
+    font-size: 1.6rem;
+    color: black;
+    margin-bottom: -0.6rem;
+  }
+}
+
+.sec-heading {
+  max-width: 900px;
+  // margin: 0 auto;
+  font-size: 2rem !important;
+  padding: 1rem 0;
+  font-weight: 500;
+
+  small {
+    font-weight: 300;
+    font-size: 1rem;
+    margin-left: 1rem;
+  }
+}

@@ -1,0 +1,33 @@
+html {
+  font-family: 'Roboto',
+    sans-serif;
+}
+
+body {
+  background-color: #afafaf9b;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.main-row {
+  width: 70%;
+  padding: 1rem;
+}
+
+.side-row {
+  padding: 2rem;
+  width: 30%;
+
+  .sec-heading {
+    font-size: 1.4rem !important;
+  }
+}
+
+@import "header";
+@import "feed";
+@import "sidebar";

@@ -1,0 +1,70 @@
+.side-card {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: white;
+  border-bottom: 1px solid #afafaf9b;
+}
+
+.card-left {
+  display: flex;
+  flex-flow: column nowrap;
+
+  sl-icon {
+    color: black;
+    font-size: 1.2rem;
+  }
+
+  .heading {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 0.6rem;
+  }
+
+  .tagline {
+    color: #6f6f6f;
+  }
+
+  .footer {
+    font-weight: 300;
+
+    sl-button {
+      &:hover {
+        color: crimson !important;
+      }
+    }
+  }
+}
+
+.discussion {
+  .heading {
+    padding: 0.2rem;
+    font-size: 1.2rem;
+
+    &:hover {
+      cursor: pointer;
+      text-decoration: underline;
+    }
+  }
+
+  footer {
+    font-size: 0.5rem;
+
+    sl-button {
+      font-size: 0.2rem !important;
+    }
+  }
+}
+
+.sec-footer {
+  background-color: white;
+  text-align: center;
+  padding: 1rem;
+
+  p {
+    border: 1px solid crimson;
+    cursor: pointer;
+    padding: 0.5rem;
+  }
+}

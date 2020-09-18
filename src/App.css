@@ -1,38 +1,235 @@
-.App {
-  text-align: center;
+html {
+  font-family: "Roboto", sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background-color: #afafaf9b;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
   display: flex;
-  flex-direction: column;
+  flex-flow: row nowrap;
+}
+
+.main-row {
+  width: 70%;
+  padding: 1rem;
+}
+
+.side-row {
+  padding: 2rem;
+  width: 30%;
+}
+.side-row .sec-heading {
+  font-size: 1.4rem !important;
+}
+
+.header-left,
+.user-menu,
+header {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background-color: white;
+}
+
+.header-left {
+  align-items: center;
+}
+
+header {
+  border-bottom: 1px solid #e8e8e8;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.05);
+  padding: 1rem 8rem;
+  position: relative;
+}
+
+sl-button::part(label) {
+  /* background-color: red; */
+  color: #6f6f6f;
+}
+
+.logo-btn {
+  background-color: #da552f;
+  width: 2.4rem;
+  height: 2.4rem;
+  border: 0px;
+  border-radius: 50%;
+  color: white;
+  font-size: 1.6rem;
+  font-weight: 900;
+  margin-right: 1.2rem;
+}
+
+sl-input {
+  width: 20rem;
+}
+
+#user {
+  margin-left: 1.2rem;
+  padding-bottom: 0.4rem;
+}
+
+.user-menu sl-icon {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+sl-menu::part(base) {
+  height: fit-content;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.cardflex {
+  background-color: white;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  color: #6f6f6f;
+  padding: 1.2rem;
+  max-width: 900px;
+  border: 1px solid #afafaf9b;
+  border-top: none;
+  position: relative;
 }
+.cardflex:hover {
+  background-color: #afafaf9b;
+  cursor: pointer;
+  transition: all 0.25s ease-in-out;
+}
+.cardflex:hover .upvotes {
+  background-color: white;
+}
+.cardflex .leftrow {
+  display: flex;
+  flex-flow: row nowrap;
+}
+.cardflex .content {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  padding: 0.2rem;
+  margin-left: 0.5rem;
+}
+.cardflex .heading {
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: black;
+}
+.cardflex .logo img {
+  max-height: 120px;
+}
+.cardflex .footer {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: baseline;
+  align-items: center;
+}
+.cardflex .footer sl-button {
+  font-size: 1rem;
+}
+.cardflex .footer p {
+  margin-left: 0.5rem;
+}
+.cardflex .footer p:hover {
+  text-decoration: underline !important;
+  cursor: pointer !important;
+}
+.cardflex .footer sl-button :hover,
+.cardflex .footer p :hover {
+  cursor: pointer;
+}
+
+.upvotes {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #afafaf9b;
+  width: 80px;
+  height: 100px;
+}
+.upvotes:hover {
+  cursor: pointer !important;
+}
+.upvotes:hover .cardflex {
+  background-color: none !important;
+}
+.upvotes sl-icon {
+  font-size: 1.6rem;
+  color: black;
+  margin-bottom: -0.6rem;
+}
+
+.sec-heading {
+  max-width: 900px;
+  font-size: 2rem !important;
+  padding: 1rem 0;
+  font-weight: 500;
+}
+.sec-heading small {
+  font-weight: 300;
+  font-size: 1rem;
+  margin-left: 1rem;
+}
+
+.side-card {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: white;
+  border-bottom: 1px solid #afafaf9b;
+}
+
+.card-left {
+  display: flex;
+  flex-flow: column nowrap;
+}
+.card-left sl-icon {
+  color: black;
+  font-size: 1.2rem;
+}
+.card-left .heading {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-bottom: 0.6rem;
+}
+.card-left .tagline {
+  color: #6f6f6f;
+}
+.card-left .footer {
+  font-weight: 300;
+}
+.card-left .footer sl-button:hover {
+  color: crimson !important;
+}
+
+.discussion .heading {
+  padding: 0.2rem;
+  font-size: 1.2rem;
+}
+.discussion .heading:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+.discussion footer {
+  font-size: 0.5rem;
+}
+.discussion footer sl-button {
+  font-size: 0.2rem !important;
+}
+
+.sec-footer {
+  background-color: white;
+  text-align: center;
+  padding: 1rem;
+}
+.sec-footer p {
+  border: 1px solid crimson;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+/*# sourceMappingURL=App.css.map */
